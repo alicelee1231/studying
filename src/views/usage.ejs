@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/6dca3e9c71.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="/css/common.css" />
+    <link rel="stylesheet" href="/css/usage.css" />
+    <title>우리들의 사용량 보기</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/5.4.5/css/swiper.css">
+  <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <header id="header">
+      <div class="desktopHeader">
+        <div class="logo">
+          <a href="/">SaveWorld</a>
+        </div>
+        <nav>
+          <li><a href="#">소개</a></li>
+          <li><a href="#">재활용 정보</a></li>
+          <li><a href="#">우리들의 사용량</a></li>
+          <li><a class="loginText" href="/login">로그인</a></li>
+        </nav>
+      </div>
+    </header>
+
+    <div class="line_wrap">우리들의 사용량 보기</div>
+
+    <div class="write_wrap">
+      <a href="/write">글쓰기</a>
+    </div>
+
+    <div class="usage_wrapper">
+      <div class="usage_wrap">
+        <table class="table">
+          <thead>
+            <tr>
+              <th width="10%">번호</th>
+              <th width="10%">지역</th>
+              <th width="10%">분류</th>
+              <th with="35%">제목</th>
+              <th width="10%">아이디</th>
+              <th width="10%">날짜</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+                <% data.forEach(el => {%>
+                <td><%=el.id%></td>
+                <td><%=el.area%></></td>
+                <td><%=el.sort%></td>
+                <td>
+                  <a href="/detail/<%=el.id%>"><%=el.title%></a>
+                </td>
+                <td><%=el.userId%></td>
+                <td><%=el.createdAt%></td>
+              </tr>          
+              <% }) %>
+            </ul>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <!-- page_wrap -->
+
+    <div class="page_wrap">
+      <div class="paging">
+        <div class="ctrlBack">
+          <a href="/usage" id="leftStart" class="leftStart">
+            <i class="arrow fa-solid fa-angles-left"></i>
+          </a>
+
+          <!-- <a href="" id="left" class="right">
+            <i class="arrow fa-solid fa-angle-left"></i>
+          </a> -->
+
+          <div class="pageNum" id="pageNum">
+            <% ['1','2','3','4','5'].forEach(pageNum => { %>
+            <div class="pageBtn<%= currentPage === pageNum ? ' actived' : ''%>">
+              <a
+                href="/health?page=<%= pageNum%>&limit=10"
+                id="pageButton1"
+                class=""
+                ><%= pageNum %></a
+              >
+            </div>
+            <% }) %>
+          </div>
+
+          <!-- <a href="" id="right" class="right">
+            <i class="arrow fa-solid fa-angle-right"></i>
+          </a> -->
+
+          <a href="/recruit_art/all?id=7" id="rightEnd" class="rightEnd">
+            <i class="arrow fa-solid fa-angles-right"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <footer id="footer">
+      <div class="footerText">문의 : sammy342@naver.com</div>
+    </footer>
+
+
+    <script src="/js/usage.js"></script>
+  </body>
+</html>

@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+a:after {
+  text-decoration: none;
+}
+
+a:active {
+  text-decoration: none;
+}
+
+a:visited {
+  text-decoration: none;
+}
+
+a:focus {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}

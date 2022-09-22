@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/common.css" />
+    <link rel="stylesheet" href="/css/write.css" />
+    <!-- axios 사용 -->
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <title>글쓰기</title>
+  </head>
+  <body>
+    <header id="header">
+      <div class="desktopHeader">
+        <div class="logo">
+          <a href="/">SaveWorld</a>
+        </div>
+        <nav>
+          <li><a href="#">소개</a></li>
+          <li><a href="#">재활용 정보</a></li>
+          <li><a href="#">우리들의 사용량</a></li>
+          <li><a class="loginText" href="/login">로그인</a></li>
+        </nav>
+      </div>
+    </header>
+
+    <div class="line_wrap">
+      <a href="/write">글쓰기</a>
+    </div>
+
+    <div class="write_wrap">
+      <form action="" method="post">
+        <div class="write">
+          <label for="">분류</label>
+          <select name="type" id="type">
+            <option value="생활쓰레기">생활쓰레기</option>
+            <option value="재활용품">재활용품</option>
+            <option value="건전지">건전지</option>
+            <option value="불연성쓰레기">불연성쓰레기</option>
+          </select>
+        </div>
+        <div class="write">
+          <label for="title">제목</label>
+          <input id="title" type="text" />
+        </div>
+        <div class="write">
+          <label for="userId">아이디</label>
+          <input id="userId" type="text" />
+        </div>
+        <div class="write">
+          <label for="기간">기간</label>
+          <input id="period" type="text" />
+        </div>
+        <div class="write">
+          <label for="areas">지역</label>
+          <select name="areas" id="areas">
+            <option value="서울">서울</option>
+            <option value="부산">부산</option>
+            <option value="대구">대구</option>
+            <option value="인천">인천</option>
+            <option value="대전">대전</option>
+            <option value="광주">광주</option>
+            <option value="울산">울산</option>
+            <option value="제주">제주</option>
+            <option value="세종">세종</option>
+          </select>
+        </div>
+        <div class="write">
+          <label for="목표">목표</label>
+          <input id="goal" type="text" />
+        </div>
+
+        <div class="write">
+          <label for="content">내용</label>
+          <textarea name="" id="content" cols="30" rows="10"></textarea>
+        </div>
+        <div class="button_wrap">
+          <button id="" type="button" onclick="aaa()">등록하기</button>
+          <button id="cancel" type="button">취소하기</button>
+        </div>
+      </form>
+    </div>
+    <!-- write_wrap -->
+
+    <footer id="footer">
+      <div class="footerText">문의 : sammy342@naver.com</div>
+    </footer>
+
+    <script src="/js/usage.js"></script>
+    <script src="/js/detail.js"></script>
+  </body>
+</html>

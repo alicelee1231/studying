@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/common.css" />
+    <link rel="stylesheet" href="/css/signUp.css" />
+
+    <!-- axios 사용 -->
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <title>우리들의 사용량 보기</title>
+  </head>
+  <body>
+    <header id="header">
+      <div class="desktopHeader">
+        <div class="logo">
+          <a href="/">SaveTheWorld</a>
+        </div>
+        <nav>
+          <li><a href="#">소개</a></li>
+          <li><a href="#">재활용 정보</a></li>
+          <li><a href="#">우리들의 사용량</a></li>
+          <li><a class="loginText" href="/login">로그인</a></li>
+        </nav>
+      </div>
+    </header>
+
+    <div class="line_wrap">회원가입</div>
+
+    <div class="sign_wrapper">
+      <div class="sign_wrap">
+        <div class="sign">
+          <label for="id">닉네임</label>
+          <input type="text" id="nickname" placeholder="닉네임을 입력하세요" />
+        </div>
+        <div class="sign">
+          <label for="email">이메일</label>
+          <input type="text" id="email" placeholder="이메일을 입력하세요" />
+        </div>
+        <div class="sign">
+          <label for="pwd">비밀번호</label>
+          <input type="password" id="pwd" placeholder="비밀번호를 입력하세요" />
+        </div>
+        <div class="sign">
+          <label for="phone_num">휴대폰번호</label>
+          <input type="text" id="phone" placeholder="휴대폰번호를 입력하세요" />
+        </div>
+        <div class="check">
+          <button type="button" onclick="signUp()">회원가입</button>
+          <button type="button">취소</button>
+        </div>
+      </div>
+    </div>
+
+    <footer id="footer">
+      <div class="footerText">문의 : sammy342@naver.com</div>
+    </footer>
+
+    <script src="/js/signUp.js"></script>
+  </body>
+</html>
